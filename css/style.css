@@ -76,14 +76,13 @@ header{
 
 .flex-container .flex-item{
     max-width: 300px;
-    max-height: 300px;
     margin-right: 25px;
     text-align: center;
 }
 
 .flex-container .flex-item img{
-    max-width: 300px;
-    max-height: 300px;
+    width: 100%;
+    max-width: 100%;
     display: block;
     padding-bottom: 10px;
     overflow: hidden;
