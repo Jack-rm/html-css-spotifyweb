@@ -189,6 +189,14 @@ header{
     text-align: center;
 }
 
+.banner-top button:hover{
+    transition: transform 0.1s;
+}
+
+.banner-top button:hover{
+    transform: scale(1.1)
+}
+
 /* Main container in flex + text properties */
 
 .main-container {
@@ -337,12 +345,15 @@ footer .flex-container {
     height: 100px;
     padding: 25px 0px 25px 15px;
     color: grey;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-content: center;
 }
 
 .footer-left img{
     width: 50px;
     margin-right: 10px;
-    vertical-align: middle;
 }
 
 .footer-left .listen-text{
@@ -358,10 +369,17 @@ footer .flex-container {
     font-size: 0.8em;
 }
 
-.footer-left i{
+.footer-left .listen-actions{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.footer-left .listen-actions i{
     text-decoration: none;
     color: grey;
-    padding: 15px 5px 0px 0px;
+    vertical-align: middle;
+    padding-right: 10px;
 }
 
 .footer-left .listen-text p:hover{
@@ -376,18 +394,34 @@ footer .flex-container {
 
 .footer-mid {
     height: 100px;
+    min-width: 100px;
+    width: 700px;
     padding: 15px;
     color: white;
     text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
 }
 
 .footer-playbar{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
     padding-bottom: 10px;
+    width: 100%;
+}
+
+.footer-playbar ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
 }
 
 .footer-playbar ul li{
-    font-size: 20px;
+    font-size: 18px;
     padding: 0px 10px;
+    line-height: 35px;
 }
 
 .footer-playbar ul li .fa-play{
@@ -397,8 +431,17 @@ footer .flex-container {
     border-radius: 50%;
 }
 
+.footer-playbar ul li .fa-play:hover{
+    transition: transform 0.1s;
+}
+
+.footer-playbar ul li .fa-play:hover{
+    transform: scale(1.1)
+}
+
 .footer-bar{
     font-size: 13px;
+    width: 100%;
     font-weight: bold;
     display: flex;
     flex-flow: row nowrap;
@@ -408,7 +451,7 @@ footer .flex-container {
 
 .footer-bar .progress-bar{
     height: 4px;
-    width: 300px;
+    width: 100%;
     background-color: grey;
     margin: 0px 20px;
     border: 1px solid transparent;
@@ -420,10 +463,31 @@ footer .flex-container {
     position: absolute;
     top:0;
     left:0;
-    height: 3.9px;
+    height: 3.5px;
     width: 50px;
     background-color: rgb(212, 212, 212);
 }
+
+.pointer{
+    position: absolute;
+    top: -4px;
+    left: 50px;
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: none;
+}
+
+.played-bar:hover .pointer{
+    display: inline-block;
+}
+
+.played-bar:hover {
+    background-color: limegreen;
+}
+
 
 /* Sezione a destra del footer con tasti azione e barra volume */
 
@@ -432,6 +496,12 @@ footer .flex-container {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+}
+
+.footer-right ul{
+    display: flex;
+    flex-flow: row nowrap;
+
 }
 
 .footer-right i{
