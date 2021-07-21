@@ -197,14 +197,14 @@ main .flex-container {
     flex-flow: row wrap;
 }
 
-.flex-container .flex-item{
+main .flex-container .flex-item{
     max-width: 300px;
     margin-right: 25px;
     text-align: center;
     margin-bottom: 25px;
 }
 
-.flex-container .flex-item img{
+main .flex-container .flex-item img{
     width: 100%;
     max-width: 100%;
     display: block;
@@ -223,6 +223,92 @@ footer .flex-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+}
+
+/* Sezione a sinistra del footer con immagine album in ascolto e tasti socials */
+
+.footer-left {
+    height: 100px;
+    padding: 25px 0px 25px 15px;
+    color: grey;
+}
+
+.footer-left img{
+    width: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer-left .listen-text{
+    padding-top: 5px;
+    padding-right: 45px;
+}
+
+.footer-left .listen-text h4{
+    color: white;
+}
+
+.footer-left .listen-text p{
+    font-size: 0.8em;
+}
+
+.footer-left i{
+    text-decoration: none;
+    color: grey;
+    padding: 15px 5px 0px 0px;
+}
+
+/* Sezione centrale del footer con play bar e progress bar */
+
+.footer-mid {
+    height: 100%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+.footer-playbar{
+    padding-bottom: 10px;
+}
+
+.footer-playbar ul li{
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+.footer-playbar ul li .fa-play{
+    font-size: 19px;
+    padding: 5px 4px 3.5px 6.5px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.footer-bar{
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bar .progress-bar{
+    height: 4px;
+    width: 300px;
+    background-color: grey;
+    margin: 0px 20px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    position: relative;
+}
+
+.played-bar{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 3.9px;
+    width: 50px;
+    background-color: rgb(212, 212, 212);
 }
 
 
