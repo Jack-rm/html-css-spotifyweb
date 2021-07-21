@@ -216,7 +216,12 @@ main .flex-container .flex-item img{
 
 footer {
     height: 100px;
+    width: 100%;
     background-color: #282828;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
 }
 
 footer .flex-container {
@@ -261,7 +266,7 @@ footer .flex-container {
 /* Sezione centrale del footer con play bar e progress bar */
 
 .footer-mid {
-    height: 100%;
+    height: 100px;
     padding: 15px;
     color: white;
     text-align: center;
@@ -308,6 +313,40 @@ footer .flex-container {
     left:0;
     height: 3.9px;
     width: 50px;
+    background-color: rgb(212, 212, 212);
+}
+
+/* Sezione a destra del footer con tasti azione e barra volume */
+
+.footer-right{
+    height: 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.footer-right i{
+    text-decoration: none;
+    color: white;
+    padding: 0px 7.5px;
+}
+
+.footer-right .progress-bar{
+    height: 4px;
+    width: 100px;
+    background-color: grey;
+    margin: 0px 10px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    position: relative;
+}
+
+.footer-right .progress-bar .played-bar{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 3.2px;
+    width: 25px;
     background-color: rgb(212, 212, 212);
 }
 
