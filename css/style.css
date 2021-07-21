@@ -14,10 +14,13 @@ ul li{
 
 body {
     background-color: #141922;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 main{
-    width: calc(100% - 10%)
+    width: calc(100% - 10%);
+    margin: 90px 0;
 }
 
 /* Container principale che racchiude header main */
@@ -45,6 +48,11 @@ header{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    font-size: 15px;
+}
+
+.nav-container ul{
+    padding-right: 20px;
 }
 
 .nav-container ul li{
@@ -56,6 +64,10 @@ header{
     color: grey
 }
 
+.nav-container .main-nav ul li{
+    position: relative;
+}
+
 .nav-container .main-nav h4{
     text-transform: uppercase;
     padding: 15px 0px 10px 0px;
@@ -63,24 +75,39 @@ header{
 }
 
 .nav-container .main-nav a i{
-    vertical-align: middle;
+    color: grey;
+    font-size: 40px;
     padding-right: 10px;
+    vertical-align: middle;
 }
 
 .nav-container .main-nav ul:nth-of-type(2) li{
-    padding-top: 10px; 
+    padding-top: 20px; 
 }
 
 .nav-container .main-nav>img:first-of-type{
     width: 135px;
-    padding-bottom: 35px; 
+    padding-bottom: 20px; 
 }
 
 .nav-container .main-nav ul li img{
     width: 25px;
     vertical-align: middle;
     margin-right: 10px;
-    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+/* Box nascosta per l'effetto hover */
+
+.nav-container .main-nav .nav-box{
+    width: 248px;
+    height: 28px;
+    background-color: transparent;
+    position: absolute;
+    top: 2px;
+    left: -20px;
+    border-left: 3px solid limegreen;
+    display: none;
 }
 
 .nav-container .main-nav i{
@@ -113,14 +140,19 @@ header{
     border-radius: 50%;
 }
 
+
 /* Banner top with Upgrade button */
 
 .banner-top {
     background-color: rgba(0,0,0,0.3);
-    width: 100%;
-    height: 100px;
+    width: calc(100% - 248px);
+    height: 90px;
     text-align: right;
-    line-height: 100px;
+    line-height: 90px;
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 1000;
 }
 
 .banner-top button{
@@ -129,34 +161,45 @@ header{
     border-radius: 20px;
     color: white;
     text-transform: uppercase;
-    padding: 10px 35px;
+    padding: 12px 35px;
     margin-right: 20px;
+    font-size: 13.5px;
+    font-weight: bold;
     text-align: center;
 }
 
 /* Main container in flex + text properties */
 
 .main-container {
-    padding: 30px;
+    padding: 20px 30px 30px 30px;
     color: grey;
 }
 
 .main-container h2{
+    font-size: 25px;
     color: white;
     padding-top: 20px;
     padding-bottom: 5px;
 }
 
 .main-container h2:first-of-type{
+    font-size: 25px;
     padding: 30px 0px;
 }
 
 .main-container p{
+    font-size: 13px;
     padding-bottom: 25px;
 }
 
+.main-container span{
+    font-size: 13px;
+}
+
 .main-container h3{
+    font-size: 17px;
     color: white;
+    padding-bottom: 10px;
 }
 
 /* Browse section with hidden divs for hover */
@@ -174,8 +217,9 @@ header{
 }
 
 .browse-section ul li{
+    font-size: 15px;
     text-transform: uppercase;
-    padding-right: 20px;
+    padding-right: 15px;
     padding-left: 30px;
     padding-bottom: 30px;
     position: relative;
@@ -187,7 +231,8 @@ header{
     top: 0;
     height: 22px;
     width: 25px;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid limegreen;
+    display: none;
 }
 
 /* Flex container with albums and relative texts */
@@ -198,10 +243,11 @@ main .flex-container {
 }
 
 main .flex-container .flex-item{
-    max-width: 300px;
+    max-width: 250px;
     margin-right: 25px;
     text-align: center;
     margin-bottom: 25px;
+    position: relative;
 }
 
 main .flex-container .flex-item img{
@@ -212,10 +258,36 @@ main .flex-container .flex-item img{
     overflow: hidden;
 }
 
+/* Box con il play button per effetto hover sugli album */
+
+main .flex-container .play-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 250px;
+    width: 250px;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+}
+
+main .flex-container .play-box i{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 93px;
+    padding: 7px 6px 7px 12px;
+    border: 5px solid white;
+    border-radius: 50%;
+    color: white;
+}
+
+main .flex-container .flex-item:hover .play-box{
+    display: block;
+}
+
 /* Footer section */
 
 footer {
-    height: 100px;
+    height: 90px;
     width: 100%;
     background-color: #282828;
     position: fixed;
@@ -283,7 +355,7 @@ footer .flex-container {
 
 .footer-playbar ul li .fa-play{
     font-size: 19px;
-    padding: 5px 4px 3.5px 6.5px;
+    padding: 5px 4px 5px 7px;
     border: 3px solid white;
     border-radius: 50%;
 }
