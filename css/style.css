@@ -32,7 +32,7 @@ main{
 /* Header css rules */
 
 header{
-    width: 10%;
+    width: 250px;
     display: flex;
     flex-direction: column;
 }
@@ -113,9 +113,9 @@ header{
     border-radius: 50%;
 }
 
-/* Main container css rules */
+/* Banner top with Upgrade button */
 
-.top-container {
+.banner-top {
     background-color: rgba(0,0,0,0.3);
     width: 100%;
     height: 100px;
@@ -123,7 +123,7 @@ header{
     line-height: 100px;
 }
 
-.top-container button{
+.banner-top button{
     background-color: rgba(0,0,0,0.3);
     border: 1px solid white;
     border-radius: 20px;
@@ -134,26 +134,65 @@ header{
     text-align: center;
 }
 
+/* Main container in flex + text properties */
+
 .main-container {
     padding: 30px;
     color: grey;
 }
 
-.browse-bar{
+.main-container h2{
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.main-container h2:first-of-type{
+    padding: 30px 0px;
+}
+
+.main-container p{
+    padding-bottom: 25px;
+}
+
+.main-container h3{
+    color: white;
+}
+
+/* Browse section with hidden divs for hover */
+
+.browse-section{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
 
-.browse-bar ul li{
+.browse-section ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.browse-section ul li{
     text-transform: uppercase;
     padding-right: 20px;
     padding-left: 30px;
-    border: 1px solid white;
-
+    padding-bottom: 30px;
+    position: relative;
 }
 
-.flex-container {
+.browse-box{
+    position: absolute; 
+    left: calc(60% - 20px);
+    top: 0;
+    height: 22px;
+    width: 25px;
+    border-bottom: 1px solid white;
+}
+
+/* Flex container with albums and relative texts */
+
+main .flex-container {
     display: flex;
     flex-flow: row wrap;
 }
@@ -162,6 +201,7 @@ header{
     max-width: 300px;
     margin-right: 25px;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .flex-container .flex-item img{
@@ -171,6 +211,20 @@ header{
     padding-bottom: 10px;
     overflow: hidden;
 }
+
+/* Footer section */
+
+footer {
+    height: 100px;
+    background-color: #282828;
+}
+
+footer .flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
 
 /* Generic css rules */
 
