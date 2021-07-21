@@ -36,6 +36,7 @@ main{
 
 header{
     width: 250px;
+    margin-bottom: 90px;
     display: flex;
     flex-direction: column;
 }
@@ -100,7 +101,7 @@ header{
 /* Box nascosta per l'effetto hover */
 
 .nav-container .main-nav .nav-box{
-    width: 248px;
+    width: 10px;
     height: 28px;
     background-color: transparent;
     position: absolute;
@@ -108,6 +109,26 @@ header{
     left: -20px;
     border-left: 3px solid limegreen;
     display: none;
+}
+
+.nav-container .main-nav ul li:hover .nav-box{
+    display: block;
+}
+
+.nav-container .main-nav ul li:hover{
+    color: white;
+}
+
+.nav-container span:hover{
+    color: white;
+}
+
+.nav-container .main-nav i:hover{
+    color: white;
+}
+
+.nav-container a:hover {
+    color: white;
 }
 
 .nav-container .main-nav i{
@@ -235,6 +256,14 @@ header{
     display: none;
 }
 
+.browse-section ul li:hover .browse-box{
+    display: block;
+}
+
+.browse-section ul li:hover{
+    color: white;
+}
+
 /* Flex container with albums and relative texts */
 
 main .flex-container {
@@ -333,6 +362,14 @@ footer .flex-container {
     text-decoration: none;
     color: grey;
     padding: 15px 5px 0px 0px;
+}
+
+.footer-left .listen-text p:hover{
+    color: white;
+}
+
+.footer-left .listen-actions i:hover{
+    color: white;
 }
 
 /* Sezione centrale del footer con play bar e progress bar */
