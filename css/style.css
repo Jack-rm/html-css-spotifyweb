@@ -77,10 +77,17 @@ header{
 }
 
 .nav-container .main-nav ul li img{
-    width: 30px;
+    width: 25px;
     vertical-align: middle;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+.nav-container .main-nav i{
+    text-transform: none;
+    padding: 0;
+    color: white;
+    font-size: 25px;
 }
 
 .nav-container .user-nav img{
@@ -106,13 +113,6 @@ header{
     border-radius: 50%;
 }
 
-.nav-container .main-nav i{
-    text-transform: none;
-    padding: 0;
-    color: white;
-    font-size: 30px;
-}
-
 /* Main container css rules */
 
 .top-container {
@@ -123,8 +123,34 @@ header{
     line-height: 100px;
 }
 
+.top-container button{
+    background-color: rgba(0,0,0,0.3);
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 35px;
+    margin-right: 20px;
+    text-align: center;
+}
+
 .main-container {
     padding: 30px;
+    color: grey;
+}
+
+.browse-bar{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.browse-bar ul li{
+    text-transform: uppercase;
+    padding-right: 20px;
+    padding-left: 30px;
+    border: 1px solid white;
+
 }
 
 .flex-container {
