@@ -39,6 +39,7 @@ header{
     margin-bottom: 90px;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
 }
 
 .nav-container {
@@ -49,7 +50,7 @@ header{
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .nav-container ul{
@@ -259,7 +260,7 @@ Da mettere in media query solo meno una certa dimensione
     font-size: 15px;
     text-transform: uppercase;
     padding-right: 15px;
-    padding-left: 30px;
+    padding-left: 15px;
     padding-bottom: 30px;
     position: relative;
 }
@@ -287,11 +288,12 @@ Da mettere in media query solo meno una certa dimensione
 main .flex-container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 main .flex-container .flex-item{
-    width: 15%;
-    margin-right: 25px;
+    width: 10%;
+    margin-right: 15px;
     text-align: center;
     margin-bottom: 25px;
 }
@@ -305,6 +307,12 @@ main .flex-container .flex-item img{
 main .flex-container .flex-item .album-box{
     position: relative;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    main .flex-container .flex-item {
+        width: 22%;
+    }
 }
 
 /* Box con il play button per effetto hover sugli album */
@@ -377,7 +385,7 @@ footer .flex-container {
 }
 
 .footer-left .listen-text p{
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 .footer-left .listen-actions{
@@ -415,6 +423,12 @@ footer .flex-container {
     align-content: center;
 }
 
+@media screen and (max-width: 992px) {
+    .footer-mid {
+        width: 400px;
+    }
+}
+
 .footer-playbar{
     display: flex;
     flex-flow: row nowrap;
@@ -430,13 +444,13 @@ footer .flex-container {
 }
 
 .footer-playbar ul li{
-    font-size: 18px;
+    font-size: 15px;
     padding: 0px 10px;
     line-height: 35px;
 }
 
 .fa-play-circle{
-    font-size: 30px;
+    font-size: 25px;
     padding: 5px 5px;
 }
 
@@ -449,7 +463,7 @@ footer .flex-container {
 }
 
 .footer-bar{
-    font-size: 13px;
+    font-size: 10px;
     width: 100%;
     font-weight: bold;
     display: flex;
