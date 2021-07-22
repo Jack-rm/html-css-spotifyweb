@@ -21,13 +21,21 @@ body {
 main{
     width: calc(100% - 10%);
     margin: 90px 0;
+    overflow-y: auto;
+}
+
+@media screen and (max-width:767px) {
+    
+    main{
+       width: 100%;
+    }
 }
 
 /* Container principale che racchiude header main */
 
 .all-container{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-flow: row nowrap;
 }
@@ -49,6 +57,7 @@ header{
     flex-flow: column nowrap;
     justify-content: space-between;
     font-size: 13px;
+    overflow-y: hidden;
 }
 
 .nav-container ul{
@@ -81,23 +90,18 @@ header{
     vertical-align: middle;
 }
 
-/* 
-
-.nav-container .main-nav ul:nth-of-type(2){
-    overflow: hidden; overflow-y: scroll;
-}
-
-Da mettere in media query solo meno una certa dimensione
-
-*/
-
 .nav-container .main-nav ul:nth-of-type(2) li{
     padding-top: 20px;
 }
 
-.nav-container .main-nav>img:first-of-type{
+.nav-container .main-nav .logo{
     width: 135px;
     padding-bottom: 20px; 
+}
+
+.nav-container .main-nav .logo img:nth-of-type(2){
+    width: 25px;
+    display: none;
 }
 
 .nav-container .main-nav ul li img{
@@ -105,6 +109,59 @@ Da mettere in media query solo meno una certa dimensione
     vertical-align: middle;
     margin-right: 10px;
     padding: 5px 0;
+}
+
+@media screen and (max-width: 767px) {
+
+    header {
+        width: 45px;
+    }
+
+    .nav-container{
+        padding: 5px 10px;
+        overflow-x: hidden;
+    }
+
+    .nav-container .main-nav .logo{
+        padding-bottom: 5px;
+    }
+
+    .nav-container .main-nav .logo img:first-of-type{
+        display: none;
+    }
+
+    .nav-container .main-nav .logo img:nth-of-type(2){
+        display: block;
+        padding-top: 0;
+    }
+
+    .nav-container .main-nav ul li span{
+        display: none;
+    }
+
+    .nav-container .main-nav h4{
+        display: none;
+    }
+
+    .nav-container .main-nav ul:nth-of-type(2){
+        display: none;
+    }
+
+    .nav-container .main-nav .fa-plus-square{
+        display: none;
+    }
+
+    .nav-container .main-nav #playlist{
+        display: none;
+    }
+
+    .nav-container .user-nav span {
+        display: none;
+    }
+
+    .nav-container .user-nav img:first-child{
+        margin-left: 4px;
+    }
 }
 
 /* Box nascosta per l'effetto hover */
@@ -164,6 +221,18 @@ Da mettere in media query solo meno una certa dimensione
     display: inline;
 }
 
+@media screen and (max-width:767px) {
+    
+    .nav-container .user-nav h4{
+        display: none;
+    }
+
+    
+    .nav-container .user-nav hr{
+        display: none;
+    }
+}
+
 .bg-gray{
     background-color: gray;
     border: 1px transparent;
@@ -204,6 +273,13 @@ Da mettere in media query solo meno una certa dimensione
 
 .banner-top button:hover{
     transform: scale(1.1)
+}
+
+@media screen and (max-width:767px) {
+    
+    .banner-top{
+       width: calc(100% - 45px);
+    }
 }
 
 /* Main container in flex + text properties */
@@ -390,9 +466,15 @@ footer .flex-container {
     padding-right: 45px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .footer-left .listen-text {
         padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer-left .listen-text {
+        padding-right: 20px;
     }
 }
 
