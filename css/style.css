@@ -290,7 +290,7 @@ main .flex-container {
 }
 
 main .flex-container .flex-item{
-    width: 10%;
+    width: 15%;
     margin-right: 15px;
     text-align: center;
     margin-bottom: 25px;
@@ -307,9 +307,15 @@ main .flex-container .flex-item .album-box{
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
     main .flex-container .flex-item {
         width: 22%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main .flex-container .flex-item {
+        width: 46%;
     }
 }
 
@@ -368,6 +374,12 @@ footer .flex-container {
     align-content: center;
 }
 
+@media screen and (max-width: 992px) {
+    .footer-left {
+        width: 200px;
+    }
+}
+
 .footer-left img{
     width: 50px;
     margin-right: 10px;
@@ -376,6 +388,12 @@ footer .flex-container {
 .footer-left .listen-text{
     padding-top: 5px;
     padding-right: 45px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-left .listen-text {
+        padding-right: 30px;
+    }
 }
 
 .footer-left .listen-text h4{
@@ -414,6 +432,7 @@ footer .flex-container {
     min-width: 100px;
     width: 700px;
     padding-bottom: 20px;
+    margin: 0px 10px;
     color: white;
     text-align: center;
     display: flex;
@@ -423,7 +442,13 @@ footer .flex-container {
 
 @media screen and (max-width: 992px) {
     .footer-mid {
-        width: 400px;
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-mid {
+        width: 250px;
     }
 }
 
