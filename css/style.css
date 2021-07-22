@@ -82,8 +82,18 @@ header{
     vertical-align: middle;
 }
 
+/* 
+
+.nav-container .main-nav ul:nth-of-type(2){
+    overflow: hidden; overflow-y: scroll;
+}
+
+Da mettere in media query solo meno una certa dimensione
+
+*/
+
 .nav-container .main-nav ul:nth-of-type(2) li{
-    padding-top: 20px; 
+    padding-top: 20px;
 }
 
 .nav-container .main-nav>img:first-of-type{
@@ -111,7 +121,7 @@ header{
     display: none;
 }
 
-.nav-container .main-nav ul li:hover .nav-box{
+.nav-container .main-nav ul li:active .nav-box{
     display: block;
 }
 
@@ -166,10 +176,10 @@ header{
 
 .banner-top {
     background-color: rgba(0,0,0,0.3);
-    width: calc(100% - 248px);
+    width: calc(100% - 175px);
     height: 90px;
-    text-align: right;
     line-height: 90px;
+    text-align: right;
     position: fixed;
     top:0;
     right:0;
@@ -264,7 +274,7 @@ header{
     display: none;
 }
 
-.browse-section ul li:hover .browse-box{
+.browse-section ul li:active .browse-box{
     display: block;
 }
 
@@ -280,41 +290,42 @@ main .flex-container {
 }
 
 main .flex-container .flex-item{
-    max-width: 250px;
+    width: 15%;
     margin-right: 25px;
     text-align: center;
     margin-bottom: 25px;
-    position: relative;
 }
 
 main .flex-container .flex-item img{
     width: 100%;
-    max-width: 100%;
     display: block;
-    padding-bottom: 10px;
     overflow: hidden;
+}
+
+main .flex-container .flex-item .album-box{
+    position: relative;
+    margin-bottom: 10px;
 }
 
 /* Box con il play button per effetto hover sugli album */
 
-main .flex-container .play-box{
+main .flex-container .flex-item .album-box .play-box{
     position: absolute;
     left: 0;
     top: 0;
-    height: 250px;
-    width: 250px;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0,0,0,0.6);
     display: none;
 }
 
-main .flex-container .play-box i{
-    font-size: 40px;
-    text-align: center;
-    margin-top: 93px;
-    padding: 7px 6px 7px 12px;
-    border: 5px solid white;
-    border-radius: 50%;
+main .flex-container .play-box .fa-play-circle{
+    font-size: 75px;
     color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 main .flex-container .flex-item:hover .play-box{
@@ -396,7 +407,7 @@ footer .flex-container {
     height: 100px;
     min-width: 100px;
     width: 700px;
-    padding: 15px;
+    padding-bottom: 20px;
     color: white;
     text-align: center;
     display: flex;
@@ -408,7 +419,6 @@ footer .flex-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    padding-bottom: 10px;
     width: 100%;
 }
 
@@ -416,6 +426,7 @@ footer .flex-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    align-items: center;
 }
 
 .footer-playbar ul li{
@@ -424,19 +435,17 @@ footer .flex-container {
     line-height: 35px;
 }
 
-.footer-playbar ul li .fa-play{
-    font-size: 19px;
-    padding: 5px 4px 5px 7px;
-    border: 3px solid white;
-    border-radius: 50%;
+.fa-play-circle{
+    font-size: 30px;
+    padding: 5px 5px;
 }
 
-.footer-playbar ul li .fa-play:hover{
+.fa-play-circle:hover{
     transition: transform 0.1s;
 }
 
-.footer-playbar ul li .fa-play:hover{
-    transform: scale(1.1)
+.fa-play-circle:hover{
+    transform: scale(1.2)
 }
 
 .footer-bar{
